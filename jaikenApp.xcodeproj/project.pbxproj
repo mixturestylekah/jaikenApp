@@ -12,6 +12,9 @@
 		9657B69E1CF5D01000B1EFE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9657B69C1CF5D01000B1EFE0 /* Main.storyboard */; };
 		9657B6A01CF5D01000B1EFE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9657B69F1CF5D01000B1EFE0 /* Assets.xcassets */; };
 		9657B6A31CF5D01000B1EFE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9657B6A11CF5D01000B1EFE0 /* LaunchScreen.storyboard */; };
+		9657B6AE1CF5D1E400B1EFE0 /* janken-choki.png in Resources */ = {isa = PBXBuildFile; fileRef = 9657B6AB1CF5D1E400B1EFE0 /* janken-choki.png */; };
+		9657B6AF1CF5D1E400B1EFE0 /* janken-gu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9657B6AC1CF5D1E400B1EFE0 /* janken-gu.png */; };
+		9657B6B01CF5D1E400B1EFE0 /* janken-pa.png in Resources */ = {isa = PBXBuildFile; fileRef = 9657B6AD1CF5D1E400B1EFE0 /* janken-pa.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		9657B69F1CF5D01000B1EFE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9657B6A21CF5D01000B1EFE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9657B6A41CF5D01000B1EFE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9657B6AB1CF5D1E400B1EFE0 /* janken-choki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "janken-choki.png"; sourceTree = "<group>"; };
+		9657B6AC1CF5D1E400B1EFE0 /* janken-gu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "janken-gu.png"; sourceTree = "<group>"; };
+		9657B6AD1CF5D1E400B1EFE0 /* janken-pa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "janken-pa.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,19 @@
 				9657B69F1CF5D01000B1EFE0 /* Assets.xcassets */,
 				9657B6A11CF5D01000B1EFE0 /* LaunchScreen.storyboard */,
 				9657B6A41CF5D01000B1EFE0 /* Info.plist */,
+				9657B6AA1CF5D1E400B1EFE0 /* janken */,
 			);
 			path = jaikenApp;
+			sourceTree = "<group>";
+		};
+		9657B6AA1CF5D1E400B1EFE0 /* janken */ = {
+			isa = PBXGroup;
+			children = (
+				9657B6AB1CF5D1E400B1EFE0 /* janken-choki.png */,
+				9657B6AC1CF5D1E400B1EFE0 /* janken-gu.png */,
+				9657B6AD1CF5D1E400B1EFE0 /* janken-pa.png */,
+			);
+			path = janken;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +141,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9657B6A31CF5D01000B1EFE0 /* LaunchScreen.storyboard in Resources */,
+				9657B6B01CF5D1E400B1EFE0 /* janken-pa.png in Resources */,
+				9657B6AE1CF5D1E400B1EFE0 /* janken-choki.png in Resources */,
 				9657B6A01CF5D01000B1EFE0 /* Assets.xcassets in Resources */,
 				9657B69E1CF5D01000B1EFE0 /* Main.storyboard in Resources */,
+				9657B6AF1CF5D1E400B1EFE0 /* janken-gu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

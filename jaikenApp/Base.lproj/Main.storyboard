@@ -1,25 +1,109 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="jaikenApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="janken-pa.png" translatesAutoresizingMaskIntoConstraints="NO" id="q2S-V1-6oj">
+                                <rect key="frame" x="85.5" y="200" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Kfu-GK-5s1"/>
+                                    <constraint firstAttribute="height" constant="150" id="Lvs-FC-INd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="janken-pa.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z6J-Lf-t8t">
+                                <rect key="frame" x="85.5" y="40" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1sr-iK-NKd"/>
+                                    <constraint firstAttribute="height" constant="150" id="NRD-aS-d5m"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCX-wR-o9v">
+                                <rect key="frame" x="123" y="360" width="75" height="30"/>
+                                <state key="normal" title="最初はグー"/>
+                                <connections>
+                                    <action selector="tapStart" destination="BYZ-38-t0r" eventType="touchUpInside" id="FvJ-9q-Xjq"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jd2-o1-JW7">
+                                <rect key="frame" x="36" y="491" width="248" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIx-8e-6bZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.70600754310344827" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="グー"/>
+                                        <connections>
+                                            <action selector="tapGu" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Nj-oN-Xxd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xU5-bs-1KR">
+                                        <rect key="frame" x="90" y="0.0" width="69" height="30"/>
+                                        <color key="backgroundColor" red="0.32152478448275862" green="0.93375538793103452" blue="0.57292564655172384" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="チョキ"/>
+                                        <connections>
+                                            <action selector="tapChoki" destination="BYZ-38-t0r" eventType="touchUpInside" id="ics-eG-MsH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFC-Hg-WyC">
+                                        <rect key="frame" x="179" y="0.0" width="70" height="30"/>
+                                        <color key="backgroundColor" red="0.58246228448275861" green="0.93375538793103452" blue="0.98666487068965514" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="パー"/>
+                                        <connections>
+                                            <action selector="tapPa" destination="BYZ-38-t0r" eventType="touchUpInside" id="hzK-yQ-CyM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="じゃんけんアプリ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFT-fq-8Gy">
+                                <rect key="frame" x="20" y="430" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z6J-Lf-t8t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1tA-Ac-6cG"/>
+                            <constraint firstItem="Jd2-o1-JW7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="5ih-hE-kZa"/>
+                            <constraint firstItem="q2S-V1-6oj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8BC-GB-xPe"/>
+                            <constraint firstItem="UFT-fq-8Gy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="BBW-F6-tcc"/>
+                            <constraint firstItem="Z6J-Lf-t8t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="BiX-94-yjX"/>
+                            <constraint firstItem="Jd2-o1-JW7" firstAttribute="top" secondItem="UFT-fq-8Gy" secondAttribute="bottom" constant="40" id="POL-0o-dRa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jd2-o1-JW7" secondAttribute="trailing" constant="20" id="UJx-km-Ixz"/>
+                            <constraint firstItem="UFT-fq-8Gy" firstAttribute="top" secondItem="KCX-wR-o9v" secondAttribute="bottom" constant="40" id="bqa-zX-QfZ"/>
+                            <constraint firstAttribute="trailing" secondItem="UFT-fq-8Gy" secondAttribute="trailing" constant="20" id="cO7-TU-J2b"/>
+                            <constraint firstItem="q2S-V1-6oj" firstAttribute="top" secondItem="Z6J-Lf-t8t" secondAttribute="bottom" constant="10" id="nbd-NF-q7E"/>
+                            <constraint firstItem="KCX-wR-o9v" firstAttribute="top" secondItem="q2S-V1-6oj" secondAttribute="bottom" constant="10" id="pRU-wu-qOr"/>
+                            <constraint firstItem="KCX-wR-o9v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wSC-cN-1Pe"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="computerimageView" destination="Z6J-Lf-t8t" id="Vm7-5m-QMh"/>
+                        <outlet property="messageLabel" destination="UFT-fq-8Gy" id="ACm-AE-loX"/>
+                        <outlet property="playerimageView" destination="q2S-V1-6oj" id="Ot9-Im-SRK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="271" y="352"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="janken-pa.png" width="233" height="217"/>
+    </resources>
 </document>
